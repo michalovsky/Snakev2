@@ -1,7 +1,9 @@
 #pragma once
+
 #include "Block.h"
 #include "Route.h"
 #include <iostream>
+
 class Snake : public Drawable
 {
 public:

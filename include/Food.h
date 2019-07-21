@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Snake.h"
+
 using namespace sf;
 
 class Food : public Drawable

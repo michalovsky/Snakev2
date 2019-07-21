@@ -1,14 +1,15 @@
 #include "Snake.h"
 #include "Food.h"
+
 int main()
 {
-	RenderWindow window{ VideoMode{900,600},"Snakev2" };
+	RenderWindow window{ VideoMode{900,600},"snake-sfml" };
 
 	sf::Texture texture;
-	if (!texture.loadFromFile("grass.jpg"))
+	if (!texture.loadFromFile("../stuff/grass.jpg"))
 	{
 		std::cout << "Load failed" << std::endl;
-		system("pause");
+		return 1;
 	}
 
 	sf::Sprite sprite;
@@ -34,7 +35,7 @@ int main()
 		window.draw(sprite);
 
 		snake.update();
-		if (snake.bodyCollision() ||snake.wallsCollision()) break; //just go insta exit if any condition is true
+		if (snake.bodyCollision() ||snake.wallsCollision()) break;
 
 		if (food.isEaten(snake))
 		{

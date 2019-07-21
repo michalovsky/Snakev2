@@ -1,5 +1,6 @@
 #pragma once
-#include <SFML\Graphics.hpp>
+#include "SFML/Graphics.hpp"
+
 using namespace sf;
 
 class Block : public Drawable
